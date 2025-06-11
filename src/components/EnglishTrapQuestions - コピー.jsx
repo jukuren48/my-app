@@ -88,8 +88,17 @@ export default function EnglishTrapQuestions() {
       }))
     );
     setFilteredQuestions(reshuffled);
-    resetState();
+    setAnswers({});
+    setDisabledChoices({});
+    setMistakeMade({});
+    setAnswerTimes({});
+    setMistakeDetails([]);
+    setCurrentIndex(0);
+    setTimeLeft(10);
+    setShowCorrect(false);
+    setIncorrectChoice(null);
     setShowQuestions(true);
+    setShowResult(false);
     setStartTime(Date.now());
   };
 
@@ -195,24 +204,13 @@ export default function EnglishTrapQuestions() {
   ).length;
 
   return (
-    <div className="max-w-4xl mx-auto p-4 space-y-6 font-sans bg-white min-h-screen">
-      {/* ロゴ表示 */}
-      <div className="flex justify-center mb-4">
-        <img
-          src={`${process.env.PUBLIC_URL}/logo.png`}
-          alt="JUKUREN LOGO"
-          className="h-24"
-        />
-      </div>
-
-      <h1 className="text-3xl font-extrabold text-center text-red-600 mb-4">
-        英語ひっかけ問題
-      </h1>
+    <div className="max-w-3xl mx-auto p-4 space-y-6">
+      <h1 className="text-2xl font-bold mb-4">中学英語・ひっかけ問題</h1>
 
       {!showQuestions && !showResult && (
-        <div className="p-4 border rounded shadow">
-          <p className="font-medium mb-2">出題単元を選んでください：</p>
-          <div className="flex flex-wrap gap-3">
+        <div>
+          <p className="font-medium">出題単元を選んでください：</p>
+          <div className="flex flex-wrap gap-2 mt-2">
             {units.map((unit) => (
               <label key={unit} className="flex items-center space-x-1">
                 <input
@@ -225,7 +223,6 @@ export default function EnglishTrapQuestions() {
               </label>
             ))}
           </div>
-
           <div className="mt-4">
             <label className="font-medium mr-2">出題数:</label>
             <select
@@ -239,8 +236,7 @@ export default function EnglishTrapQuestions() {
               <option value="all">すべて</option>
             </select>
           </div>
-
-          <div className="mt-4 flex gap-4 flex-wrap">
+          <div className="mt-4 flex gap-4">
             <button
               className="px-4 py-2 bg-green-500 text-white rounded"
               onClick={() => setSelectedUnits(units)}
@@ -253,103 +249,102 @@ export default function EnglishTrapQuestions() {
             >
               すべて解除
             </button>
-            <button
-              className={`px-4 py-2 rounded ${
-                selectedUnits.length === 0
-                  ? "bg-gray-300 text-gray-500"
-                  : "bg-blue-500 text-white"
-              }`}
-              onClick={handleStart}
-              disabled={selectedUnits.length === 0}
-            >
-              出題開始
-            </button>
           </div>
+          <button
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+            onClick={handleStart}
+            disabled={selectedUnits.length === 0}
+          >
+            出題開始
+          </button>
         </div>
       )}
 
       {showQuestions && !showResult && currentQuestion && (
-        <div className="p-4 border rounded shadow">
-          <div className="mb-3 text-lg font-medium text-center">
-            {currentIndex + 1} / {filteredQuestions.length}問
+        <div>
+          <div className="mb-4 text-lg font-medium">
+            得点：{finalCorrect} / {finalTotal}
           </div>
-
-          <div className="mb-2 text-sm text-gray-600 text-center">
+          <div className="mb-2 text-sm text-gray-500">
             残り時間：{timeLeft} 秒
           </div>
+          <div className="border p-4 rounded shadow">
+            <p className="font-medium">
+              Q{currentIndex + 1}. {currentQuestion.question}
+            </p>
+            <div className="grid grid-cols-2 gap-2 mt-3">
+              {currentQuestion.choices.map((choice) => (
+                <button
+                  key={choice}
+                  className={`border px-4 py-2 rounded text-lg font-medium ${
+                    showCorrect && choice === currentQuestion.correct
+                      ? "bg-green-200"
+                      : (disabledChoices[currentQuestion.key] || []).includes(
+                          choice
+                        )
+                      ? "bg-red-200"
+                      : "bg-white"
+                  }`}
+                  onClick={() => handleChoice(choice)}
+                  disabled={
+                    showCorrect ||
+                    (disabledChoices[currentQuestion.key] || []).includes(
+                      choice
+                    )
+                  }
+                >
+                  {choice}
+                </button>
+              ))}
+            </div>
 
-          <p className="font-medium text-xl mb-4">{currentQuestion.question}</p>
+            {incorrectChoice && (
+              <div className="mt-6 text-red-800 text-xl font-bold bg-red-100 border-l-4 border-red-500 p-4 rounded">
+                ❌ <strong>{incorrectChoice}</strong>:{" "}
+                {currentQuestion.incorrectExplanations[incorrectChoice]}
+                <div className="mt-2">
+                  <button
+                    className="px-4 py-2 bg-yellow-500 text-white rounded"
+                    onClick={handleContinue}
+                  >
+                    続ける
+                  </button>
+                </div>
+              </div>
+            )}
 
-          <div className="grid grid-cols-2 gap-3">
-            {currentQuestion.choices.map((choice) => (
-              <button
-                key={choice}
-                className={`border px-4 py-2 rounded text-lg font-medium ${
-                  showCorrect && choice === currentQuestion.correct
-                    ? "bg-green-300"
-                    : (disabledChoices[currentQuestion.key] || []).includes(
-                        choice
-                      )
-                    ? "bg-red-200"
-                    : "bg-white"
-                }`}
-                onClick={() => handleChoice(choice)}
-                disabled={
-                  showCorrect ||
-                  (disabledChoices[currentQuestion.key] || []).includes(choice)
-                }
-              >
-                {choice}
-              </button>
-            ))}
+            {showCorrect && (
+              <div className="mt-4 text-green-700">
+                ✅ 正解！{currentQuestion.explanation}
+                <div className="mt-4">
+                  <button
+                    className="px-4 py-2 bg-indigo-500 text-white rounded"
+                    onClick={handleNext}
+                  >
+                    {currentIndex + 1 === filteredQuestions.length
+                      ? "結果を見る"
+                      : "次へ ➤"}
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
-
-          {incorrectChoice && (
-            <div className="mt-6 p-4 bg-red-100 border-l-4 border-red-600 rounded text-lg">
-              ❌ {incorrectChoice}：
-              {currentQuestion.incorrectExplanations[incorrectChoice]}
-              <div className="mt-3 text-center">
-                <button
-                  className="px-6 py-2 bg-yellow-500 text-white rounded"
-                  onClick={handleContinue}
-                >
-                  続ける
-                </button>
-              </div>
-            </div>
-          )}
-
-          {showCorrect && (
-            <div className="mt-4 text-green-700 font-semibold">
-              ✅ 正解！{currentQuestion.explanation}
-              <div className="mt-4 text-center">
-                <button
-                  className="px-6 py-2 bg-indigo-500 text-white rounded"
-                  onClick={handleNext}
-                >
-                  {currentIndex + 1 === filteredQuestions.length
-                    ? "結果を見る"
-                    : "次へ ➤"}
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       )}
 
       {showResult && (
         <div className="text-center mt-10">
-          <h2 className="text-3xl font-bold text-green-600 mb-4">結果発表！</h2>
-          <p className="text-2xl">
+          <h2 className="text-3xl font-bold text-green-600">結果発表！</h2>
+          <p className="text-2xl mt-4">
             正答率：{Math.round((finalCorrect / finalTotal) * 100)}%
           </p>
-          <p className="mt-2 text-lg">
+          <p className="text-lg mt-2">
             {finalCorrect}問正解 / 全{finalTotal}問
           </p>
 
           {mistakeDetails.length > 0 && (
-            <div className="mt-6 text-left mx-auto max-w-xl">
-              <h3 className="text-xl text-red-600 font-bold mb-2">
+            <div className="mt-6 text-left">
+              <h3 className="text-xl font-semibold mb-2 text-red-600">
                 間違えた問題一覧
               </h3>
               <ul className="space-y-2 text-sm">
@@ -366,19 +361,21 @@ export default function EnglishTrapQuestions() {
             </div>
           )}
 
-          <div className="mt-6 flex justify-center gap-4 flex-wrap">
+          <div className="mt-6 flex justify-center gap-4">
             <button
-              className="px-6 py-3 bg-blue-500 text-white rounded text-lg"
-              onClick={resetState}
+              className="px-6 py-3 bg-blue-500 text-white text-lg rounded"
+              onClick={() => {
+                resetState();
+              }}
             >
               もう一度やる
             </button>
             {mistakeDetails.length > 0 && (
               <button
-                className="px-6 py-3 bg-red-500 text-white rounded text-lg"
+                className="px-6 py-3 bg-red-500 text-white text-lg rounded"
                 onClick={handleRetryMistakes}
               >
-                間違えたところだけ再チャレンジ
+                間違えたところだけ再チャレ！
               </button>
             )}
           </div>
