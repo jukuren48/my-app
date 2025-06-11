@@ -1,0 +1,1827 @@
+[
+  {
+    "id": 1,
+    "unit": "現在形と三単現",
+    "question": "These days, my sister usually (  ) to school by bike.",
+    "choices": ["go", "goes", "going", "went"],
+    "correct": "goes",
+    "explanation": "現在の習慣を表し、主語が三人称単数なので 'goes'。",
+    "incorrectExplanations": {
+      "go": "三人称単数（my sister）の場合、動詞に -s が必要です。",
+      "going": "動名詞 'going' は文の動詞として使えません。",
+      "went": "'went' は過去形。'These days' は現在の習慣を示しています。"
+    }
+  },
+  {
+    "id": 2,
+    "unit": "助動詞",
+    "question": "In our school rules, students (  ) bring their ID cards every day.",
+    "choices": ["must", "must to", "have to", "has to"],
+    "correct": "must",
+    "explanation": "'must' は助動詞で、義務やルールを示すときに使います。",
+    "incorrectExplanations": {
+      "must to": "'must' の後ろに 'to' は不要です。",
+      "have to": "文法的には正しいが、学校のルールでは 'must' の方が自然です。",
+      "has to": "'students' は複数形なので 'has' は使えません。"
+    }
+  },
+  {
+    "id": 3,
+    "unit": "現在完了形",
+    "question": "I have never (  ) a whale before.",
+    "choices": ["see", "saw", "seen", "seeing"],
+    "correct": "seen",
+    "explanation": "現在完了（have + 過去分詞）なので 'seen' を使います。",
+    "incorrectExplanations": {
+      "see": "'have' の後は過去分詞が必要です。",
+      "saw": "'saw' は過去形で、現在完了には使えません。",
+      "seeing": "進行形ではなく、完了形を求めています。"
+    }
+  },
+  {
+    "id": 4,
+    "unit": "動名詞と不定詞",
+    "question": "I enjoy (  ) tennis with my friends.",
+    "choices": ["play", "to play", "playing", "played"],
+    "correct": "playing",
+    "explanation": "'enjoy' の後ろは動名詞を使います。",
+    "incorrectExplanations": {
+      "play": "'enjoy' の後には動名詞が必要です。",
+      "to play": "'to不定詞' ではなく、'動名詞' を使います。",
+      "played": "'played' は過去形で、文法的に不自然です。"
+    }
+  },
+  {
+    "id": 5,
+    "unit": "接続詞（if / when）",
+    "question": "I will call you (  ) I get home.",
+    "choices": ["if", "when", "because", "so"],
+    "correct": "when",
+    "explanation": "'get home' は確実に起こる未来の出来事なので 'when' が自然です。",
+    "incorrectExplanations": {
+      "if": "不確実な条件に使いますが、この文では帰宅は確定しているので不自然です。",
+      "because": "理由ではないため使えません。",
+      "so": "'so' は結果を表す接続詞で、この文には合いません。"
+    }
+  },
+  {
+    "id": 6,
+    "unit": "be動詞",
+    "question": "My brother (  ) a good soccer player.",
+    "choices": ["is", "are", "am", "be"],
+    "correct": "is",
+    "explanation": "'brother' は三人称単数なので、be動詞は 'is' を使います。",
+    "incorrectExplanations": {
+      "are": "'are' は複数主語に使います。",
+      "am": "'am' は 'I' にしか使えません。",
+      "be": "'be' は原形でこの文には使えません。"
+    }
+  },
+  {
+    "id": 7,
+    "unit": "一般動詞",
+    "question": "I (  ) tennis every Sunday.",
+    "choices": ["play", "plays", "playing", "played"],
+    "correct": "play",
+    "explanation": "'I' は主語なので三単現のsは不要。現在の習慣には現在形の 'play' を使います。",
+    "incorrectExplanations": {
+      "plays": "三単現の 's' は三人称単数にしか使いません。",
+      "playing": "進行形ではないので 'playing' は不適切です。",
+      "played": "過去の話ではないので不適切です。"
+    }
+  },
+  {
+    "id": 8,
+    "unit": "冠詞",
+    "question": "He has (  ) orange in his bag.",
+    "choices": ["a", "an", "the", "no"],
+    "correct": "an",
+    "explanation": "母音で始まる 'orange' の前には 'an' を使います。",
+    "incorrectExplanations": {
+      "a": "'a' は子音で始まる単語の前に使います。",
+      "the": "特定されていない 'orange' なので 'the' は不自然です。",
+      "no": "意味が変わってしまいます。"
+    }
+  },
+  {
+    "id": 9,
+    "unit": "名詞",
+    "question": "There are many (  ) in the park.",
+    "choices": ["child", "childs", "children", "childrens"],
+    "correct": "children",
+    "explanation": "'children' は 'child' の正しい複数形です。",
+    "incorrectExplanations": {
+      "child": "単数形なので 'are many' と合いません。",
+      "childs": "間違った複数形です。",
+      "childrens": "'children' 自体が複数形なので 's' は不要です。"
+    }
+  },
+  {
+    "id": 10,
+    "unit": "形容詞",
+    "question": "This is a (  ) story.",
+    "choices": ["interest", "interested", "interesting", "interests"],
+    "correct": "interesting",
+    "explanation": "'story' は人ではないので、性質を表す 'interesting' を使います。",
+    "incorrectExplanations": {
+      "interest": "名詞で文法的に使えません。",
+      "interested": "人の感情に使います。物には使いません。",
+      "interests": "三単現の動詞、または名詞の複数形で文脈に合いません。"
+    }
+  },
+  {
+    "id": 11,
+    "unit": "現在進行形",
+    "question": "Look! The baby (  ) now.",
+    "choices": ["cry", "cried", "is crying", "crying"],
+    "correct": "is crying",
+    "explanation": "'now' があるため現在進行形を使います。主語が単数なので 'is crying' が正解です。",
+    "incorrectExplanations": {
+      "cry": "現在形であり、進行中の動作には不適切です。",
+      "cried": "過去形であり、'now' に合いません。",
+      "crying": "助動詞やbe動詞がないため文になりません。"
+    }
+  },
+  {
+    "id": 12,
+    "unit": "過去形",
+    "question": "I (  ) to the beach last weekend.",
+    "choices": ["go", "went", "going", "gone"],
+    "correct": "went",
+    "explanation": "'last weekend' という過去を表す語があるため、過去形 'went' が正しいです。",
+    "incorrectExplanations": {
+      "go": "現在形であり、過去の話には合いません。",
+      "going": "進行形ではないため不適切です。",
+      "gone": "'have gone' などと使う過去分詞です。"
+    }
+  },
+  {
+    "id": 13,
+    "unit": "未来形",
+    "question": "She (  ) visit her grandparents next month.",
+    "choices": ["will", "is", "was", "has"],
+    "correct": "will",
+    "explanation": "'next month' が未来を表すので 'will' を使った未来形が正解です。",
+    "incorrectExplanations": {
+      "is": "現在形であり、未来には使えません（be going toなら可能）。",
+      "was": "過去形なので未来と合いません。",
+      "has": "完了形や所有を表す語で、未来の助動詞にはなりません。"
+    }
+  },
+  {
+    "id": 14,
+    "unit": "助動詞",
+    "question": "You (  ) study harder to pass the test.",
+    "choices": ["must", "must to", "has to", "shoulding"],
+    "correct": "must",
+    "explanation": "'must' は助動詞で、強い義務を表します。後ろは動詞の原形が続きます。",
+    "incorrectExplanations": {
+      "must to": "'must' の後に 'to' は不要です。",
+      "has to": "三人称単数でないため 'has to' は不適切です。",
+      "shoulding": "助動詞に 'ing' はつけられません。"
+    }
+  },
+  {
+    "id": 15,
+    "unit": "疑問詞",
+    "question": "(  ) do you get up every morning?",
+    "choices": ["Why", "What", "How", "When"],
+    "correct": "When",
+    "explanation": "'get up' の時刻を聞いているので、時間に関する 'When' が正解です。",
+    "incorrectExplanations": {
+      "Why": "'Why' は理由を尋ねるときに使います。",
+      "What": "'What' は物や内容を尋ねる語です。",
+      "How": "'How' は方法や状態を聞くときに使います。"
+    }
+  },
+  {
+    "id": 11,
+    "unit": "現在進行形",
+    "question": "Look! The baby (  ) now.",
+    "choices": ["sleep", "sleeps", "sleeping", "is sleeping"],
+    "correct": "is sleeping",
+    "explanation": "現在進行形は be動詞＋動詞のing形で表現します。この場合は 'is sleeping'。",
+    "incorrectExplanations": {
+      "sleep": "原形の 'sleep' は進行形では使えません。",
+      "sleeps": "現在形で、進行中の動作を表すには不適切です。",
+      "sleeping": "be動詞がないので文として不完全です。"
+    }
+  },
+  {
+    "id": 12,
+    "unit": "過去形",
+    "question": "I (  ) to Kyoto last weekend.",
+    "choices": ["go", "went", "going", "gone"],
+    "correct": "went",
+    "explanation": "'last weekend' があるため、過去形の 'went' を使います。",
+    "incorrectExplanations": {
+      "go": "現在形なので過去の出来事には合いません。",
+      "going": "進行形や名詞的用法で、時制に合いません。",
+      "gone": "'have gone' のように完了形で使う形なので不適切です。"
+    }
+  },
+  {
+    "id": 13,
+    "unit": "未来形",
+    "question": "She (  ) visit her grandma next week.",
+    "choices": ["will", "is", "was", "are"],
+    "correct": "will",
+    "explanation": "未来の予定には 'will＋動詞の原形' を使います。",
+    "incorrectExplanations": {
+      "is": "'is' だけでは未来形になりません。",
+      "was": "過去形で、未来には合いません。",
+      "are": "主語 'she' に対して文法的に不適切です。"
+    }
+  },
+  {
+    "id": 14,
+    "unit": "助動詞",
+    "question": "You (  ) take an umbrella. It looks like rain.",
+    "choices": ["should", "must to", "can to", "has to"],
+    "correct": "should",
+    "explanation": "'should' は助言や提案を表す助動詞で、文脈に最も合っています。",
+    "incorrectExplanations": {
+      "must to": "'must' の後ろに 'to' は不要です。",
+      "can to": "'can' にも 'to' は不要で、使い方が間違っています。",
+      "has to": "'has to' は三人称単数にしか使えません。主語が 'you' なので不適切です。"
+    }
+  },
+  {
+    "id": 15,
+    "unit": "疑問詞",
+    "question": "(  ) do you go to school? – By bike.",
+    "choices": ["When", "How", "What", "Where"],
+    "correct": "How",
+    "explanation": "'By bike'（自転車で）という答え方に合う疑問詞は 'How'（どうやって）です。",
+    "incorrectExplanations": {
+      "When": "'When' は「いつ」に対する質問です。",
+      "What": "'What' は「何」に対する質問なので不自然です。",
+      "Where": "'Where' は「どこに」で、移動手段には使いません。"
+    }
+  },
+  {
+    "id": 16,
+    "unit": "接続詞",
+    "question": "I stayed home (  ) it was raining.",
+    "choices": ["and", "but", "because", "or"],
+    "correct": "because",
+    "explanation": "理由を表す接続詞は 'because'。雨が降っていたから家にいた、という因果関係を表す。",
+    "incorrectExplanations": {
+      "and": "'and' は並列の意味で、理由には使えません。",
+      "but": "'but' は逆接なので、文意と合いません。",
+      "or": "'or' は選択肢を示すときに使います。"
+    }
+  },
+  {
+    "id": 17,
+    "unit": "比較",
+    "question": "This book is (  ) than that one.",
+    "choices": [
+      "interesting",
+      "more interesting",
+      "most interesting",
+      "very interesting"
+    ],
+    "correct": "more interesting",
+    "explanation": "2つの物を比べる場合は比較級 'more 〜 than' を使います。",
+    "incorrectExplanations": {
+      "interesting": "比較の表現ではないため不適切。",
+      "most interesting": "'most' は最上級で、3つ以上の中で使います。",
+      "very interesting": "'very' は程度を強調するだけで比較には使えません。"
+    }
+  },
+  {
+    "id": 18,
+    "unit": "不定詞",
+    "question": "I want (  ) a new bike.",
+    "choices": ["buy", "to buy", "buying", "bought"],
+    "correct": "to buy",
+    "explanation": "'want' の後ろには不定詞（to + 動詞の原形）が続きます。",
+    "incorrectExplanations": {
+      "buy": "'to' がないため文法的に不完全です。",
+      "buying": "動名詞は 'enjoy' などに使いますが 'want' には不適切です。",
+      "bought": "過去形で使い方が誤っています。"
+    }
+  },
+  {
+    "id": 19,
+    "unit": "動名詞",
+    "question": "He enjoys (  ) tennis after school.",
+    "choices": ["play", "to play", "playing", "played"],
+    "correct": "playing",
+    "explanation": "'enjoy' の後ろは動名詞（動詞 + ing）を使うのがルールです。",
+    "incorrectExplanations": {
+      "play": "原形は 'enjoy' の後には使えません。",
+      "to play": "'to不定詞' は 'want' や 'hope' などに使います。",
+      "played": "過去形で、名詞的役割を果たしません。"
+    }
+  },
+  {
+    "id": 20,
+    "unit": "受動態",
+    "question": "English (  ) in many countries.",
+    "choices": ["speaks", "is speaking", "is spoken", "was spoken"],
+    "correct": "is spoken",
+    "explanation": "現在形の受動態は 'is + 過去分詞'。多くの国で英語が話されている、という意味です。",
+    "incorrectExplanations": {
+      "speaks": "能動態であり、主語が人でないため不適切です。",
+      "is speaking": "進行形で、受動態の形ではありません。",
+      "was spoken": "過去形なので '現在形' の文と時制が合いません。"
+    }
+  },
+  {
+    "id": 21,
+    "unit": "間接疑問文",
+    "question": "I don’t know (  ) she is coming to the party.",
+    "choices": ["when", "is", "does", "whether"],
+    "correct": "whether",
+    "explanation": "間接疑問文では 'if' や 'whether' を使って「〜かどうか」を表します。この文では 'whether' が適切です。",
+    "incorrectExplanations": {
+      "when": "'when' は「いつ」を聞くときで、'かどうか' の意味にはなりません。",
+      "is": "文の構造が崩れるため不適切です。",
+      "does": "助動詞 'does' はここでは不要です。"
+    }
+  },
+  {
+    "id": 22,
+    "unit": "第4文型",
+    "question": "She gave me (  ).",
+    "choices": ["book", "a book", "books", "the books"],
+    "correct": "a book",
+    "explanation": "SVOO（第4文型）の例で、'me'（人）と 'a book'（物）の順で与える行為を表します。",
+    "incorrectExplanations": {
+      "book": "冠詞がないため文法的に不自然です。",
+      "books": "複数形にする理由が文中にありません。",
+      "the books": "特定の本ではない場合は不自然です。"
+    }
+  },
+  {
+    "id": 23,
+    "unit": "関係代名詞",
+    "question": "The girl (  ) is singing is my sister.",
+    "choices": ["who", "which", "where", "what"],
+    "correct": "who",
+    "explanation": "'who' は人を先行詞に取る関係代名詞。'The girl' を修飾しているので 'who' が正解です。",
+    "incorrectExplanations": {
+      "which": "'which' は物を修飾する関係代名詞です。",
+      "where": "'where' は場所を表す関係副詞です。",
+      "what": "'what' は先行詞を含む形なので使えません。"
+    }
+  },
+  {
+    "id": 24,
+    "unit": "仮定法",
+    "question": "If I were you, I (  ) take the job.",
+    "choices": ["will", "would", "can", "am"],
+    "correct": "would",
+    "explanation": "仮定法過去の表現では 'If I were 〜, I would 〜' の形を取ります。現実と異なる仮の状況を表します。",
+    "incorrectExplanations": {
+      "will": "仮定法では 'would' を使います。",
+      "can": "'can' は現実的な可能性を表し、仮定法には合いません。",
+      "am": "'I were' が正しい仮定法の形です。"
+    }
+  },
+  {
+    "id": 25,
+    "unit": "付加疑問文",
+    "question": "You’re from Tokyo, (  )?",
+    "choices": ["aren’t you", "don’t you", "are you", "isn't it"],
+    "correct": "aren’t you",
+    "explanation": "肯定文のあとには否定の疑問タグをつけます。'You are' に対して 'aren’t you?' が適切です。",
+    "incorrectExplanations": {
+      "don’t you": "'are' に対して 'don’t' を使うのは誤りです。",
+      "are you": "これは否定文のあとに付ける形式です。",
+      "isn't it": "'you' に対して 'it' は代名詞の一致が取れません。"
+    }
+  },
+  {
+    "id": 26,
+    "unit": "命令文",
+    "question": "(  ) quiet in the library.",
+    "choices": ["Be", "Is", "Are", "Being"],
+    "correct": "Be",
+    "explanation": "命令文では主語を省略し、動詞の原形から始めます。ここでは 'Be' が正解です。",
+    "incorrectExplanations": {
+      "Is": "'Is' は三単現の be 動詞で、命令文には使いません。",
+      "Are": "'Are' は複数主語に使う be 動詞で、命令には不適切です。",
+      "Being": "'Being' は進行形や分詞構文で使う形です。"
+    }
+  },
+  {
+    "id": 27,
+    "unit": "助動詞",
+    "question": "You (  ) swim here. It's dangerous.",
+    "choices": ["must not", "don't have to", "can't", "should"],
+    "correct": "must not",
+    "explanation": "'must not' は「してはいけない」という強い禁止を表します。",
+    "incorrectExplanations": {
+      "don't have to": "'〜しなくてもよい』という意味で、禁止にはなりません。",
+      "can't": "物理的にできない、という意味が強く、禁止には 'must not' を使います。",
+      "should": "'すべき』という助言で、禁止の意味にはなりません。"
+    }
+  },
+  {
+    "id": 28,
+    "unit": "現在完了（継続）",
+    "question": "She has (  ) in Tokyo for three years.",
+    "choices": ["lived", "live", "living", "lives"],
+    "correct": "lived",
+    "explanation": "'現在完了形（have＋過去分詞）' で継続を表す文です。'lived' が正解です。",
+    "incorrectExplanations": {
+      "live": "'have' の後は過去分詞が必要です。",
+      "living": "進行形や動名詞で使う形です。",
+      "lives": "'三単現の現在形' で、'have' の後には使えません。"
+    }
+  },
+  {
+    "id": 29,
+    "unit": "疑問文の語順",
+    "question": "(  ) your father like coffee?",
+    "choices": ["Does", "Do", "Is", "Did"],
+    "correct": "Does",
+    "explanation": "三人称単数の主語 'your father' には 'Does' を使った疑問文が正解です。",
+    "incorrectExplanations": {
+      "Do": "'Do' は I, you, we, they に使います。",
+      "Is": "'Is' は be 動詞の疑問文用で、一般動詞には使えません。",
+      "Did": "'Did' は過去の疑問文で、現在の話には合いません。"
+    }
+  },
+  {
+    "id": 30,
+    "unit": "前置詞",
+    "question": "My birthday is (  ) September.",
+    "choices": ["in", "on", "at", "by"],
+    "correct": "in",
+    "explanation": "'月' を表すときの前置詞は 'in' を使います。",
+    "incorrectExplanations": {
+      "on": "'on' は日付や曜日に使います（例: on Monday）。",
+      "at": "'at' は時刻や特定の地点に使います。",
+      "by": "'by' は期限を表すときに使われます。"
+    }
+  },
+  {
+    "id": 31,
+    "unit": "過去進行形",
+    "question": "I (  ) TV when my mother came home.",
+    "choices": ["was watching", "watched", "am watching", "watch"],
+    "correct": "was watching",
+    "explanation": "「～していたとき」など過去のある時点の動作には過去進行形を使います。",
+    "incorrectExplanations": {
+      "watched": "単純過去形で「見た」となるが、動作が進行中の文脈には合いません。",
+      "am watching": "現在進行形なので、現在の出来事になってしまいます。",
+      "watch": "原形は文法的に誤りです。"
+    }
+  },
+  {
+    "id": 32,
+    "unit": "分詞",
+    "question": "The girl (  ) the piano is my sister.",
+    "choices": ["playing", "played", "plays", "to play"],
+    "correct": "playing",
+    "explanation": "「ピアノを弾いている女の子」という現在の動作には現在分詞を使います。",
+    "incorrectExplanations": {
+      "played": "過去分詞で「弾かれた」となるため意味が変わってしまいます。",
+      "plays": "三単現の現在形はこのような形では使えません。",
+      "to play": "不定詞を使う文ではありません。"
+    }
+  },
+  {
+    "id": 33,
+    "unit": "副詞",
+    "question": "He runs very (  ).",
+    "choices": ["fast", "fastly", "fastest", "faster"],
+    "correct": "fast",
+    "explanation": "'fast' は形容詞も副詞も同じ形です。",
+    "incorrectExplanations": {
+      "fastly": "'fastly' という副詞は存在しません。",
+      "fastest": "最上級なので 'very' とは使いません。",
+      "faster": "比較級なので 'very' とは一緒に使いません。"
+    }
+  },
+  {
+    "id": 34,
+    "unit": "形容詞",
+    "question": "This book is very (  ).",
+    "choices": ["interesting", "interested", "interest", "interests"],
+    "correct": "interesting",
+    "explanation": "'interesting' は「興味深い」という意味の形容詞です。",
+    "incorrectExplanations": {
+      "interested": "'interested' は「興味を持っている」という人の感情に使います。",
+      "interest": "名詞なので形容詞の位置には使えません。",
+      "interests": "三単現動詞または複数名詞の形で文法的に合いません。"
+    }
+  },
+  {
+    "id": 35,
+    "unit": "関係代名詞",
+    "question": "This is the book (  ) I bought yesterday.",
+    "choices": ["that", "what", "which", "where"],
+    "correct": "that",
+    "explanation": "'that' は関係代名詞として「私が昨日買った本」という意味を作ります。",
+    "incorrectExplanations": {
+      "what": "'what' は「～するもの」などで使われるため意味が異なります。",
+      "which": "文法的には正しいが、口語では 'that' がよく使われます。",
+      "where": "'where' は場所を指す語に使います。"
+    }
+  },
+  {
+    "id": 36,
+    "unit": "不定詞",
+    "question": "I want (  ) a teacher in the future.",
+    "choices": ["to be", "be", "being", "been"],
+    "correct": "to be",
+    "explanation": "「～したい」という表現には不定詞 'to be' を使います。",
+    "incorrectExplanations": {
+      "be": "原形のままでは 'want' の目的語として使えません。",
+      "being": "'being' は進行形や受動態に使われます。",
+      "been": "完了形で使う過去分詞なので文法的に誤りです。"
+    }
+  },
+  {
+    "id": 37,
+    "unit": "比較",
+    "question": "This math problem is (  ) than the last one.",
+    "choices": ["harder", "hard", "more hard", "hardest"],
+    "correct": "harder",
+    "explanation": "'than' があるため比較級 'harder' を使います。",
+    "incorrectExplanations": {
+      "hard": "比較ではなく通常形なので不適切です。",
+      "more hard": "'hard' は比較級で 'harder' となるので 'more' は不要です。",
+      "hardest": "最上級なので 'than' とは使いません。"
+    }
+  },
+  {
+    "id": 38,
+    "unit": "接続詞",
+    "question": "(  ) it was raining, we went out.",
+    "choices": ["Although", "Because", "If", "When"],
+    "correct": "Although",
+    "explanation": "'雨が降っていたけれども出かけた' という逆接には 'Although' を使います。",
+    "incorrectExplanations": {
+      "Because": "'Because' だと「雨が降っていたから出かけた」になって意味が逆です。",
+      "If": "'If' は仮定なのでこの文脈には合いません。",
+      "When": "'When' は「〜のとき」なので意味が異なります。"
+    }
+  },
+  {
+    "id": 39,
+    "unit": "助動詞",
+    "question": "You (  ) be quiet in the library.",
+    "choices": ["must", "can", "may", "should"],
+    "correct": "must",
+    "explanation": "'must' は「〜しなければならない」という強い義務を表します。",
+    "incorrectExplanations": {
+      "can": "'can' は可能を表すため文意に合いません。",
+      "may": "'may' は許可の意味なので不適切です。",
+      "should": "義務としてはやや弱い意味になります。"
+    }
+  },
+  {
+    "id": 40,
+    "unit": "未来形",
+    "question": "He (  ) be 15 next year.",
+    "choices": ["will", "is", "was", "has"],
+    "correct": "will",
+    "explanation": "'next year' があるため未来形 'will' を使います。",
+    "incorrectExplanations": {
+      "is": "現在のことを表すので未来には使えません。",
+      "was": "過去形なので文意に合いません。",
+      "has": "現在完了などに使われるためここでは不適切です。"
+    }
+  },
+  {
+    "id": 41,
+    "unit": "受動態",
+    "question": "This letter was (  ) by my teacher.",
+    "choices": ["written", "wrote", "write", "writing"],
+    "correct": "written",
+    "explanation": "受動態には 'be動詞＋過去分詞' の形を使います。",
+    "incorrectExplanations": {
+      "wrote": "'wrote' は過去形で、受動態には使えません。",
+      "write": "'write' は原形で文法的に誤りです。",
+      "writing": "'writing' は進行形や動名詞で使われる形です。"
+    }
+  },
+  {
+    "id": 42,
+    "unit": "現在完了",
+    "question": "I have (  ) the book twice.",
+    "choices": ["read", "reading", "readed", "reads"],
+    "correct": "read",
+    "explanation": "'have + 過去分詞' で現在完了形を作ります。'read' は過去分詞も同じ形です。",
+    "incorrectExplanations": {
+      "reading": "現在分詞で、現在完了には使えません。",
+      "readed": "誤った過去形で、正しくは 'read'。",
+      "reads": "三単現の現在形なので文法的に不適切です。"
+    }
+  },
+  {
+    "id": 43,
+    "unit": "第1文型",
+    "question": "He (  ) every morning.",
+    "choices": ["runs", "runs fast", "running", "is run"],
+    "correct": "runs",
+    "explanation": "主語＋動詞で文が完結するのが第1文型です。",
+    "incorrectExplanations": {
+      "runs fast": "意味は通じるが 'fast' は文型上は修飾語です。",
+      "running": "現在分詞で主語に続けることはできません。",
+      "is run": "受動態で意味が変わってしまいます。"
+    }
+  },
+  {
+    "id": 44,
+    "unit": "第2文型",
+    "question": "The soup tastes (  ).",
+    "choices": ["delicious", "deliciously", "eat", "tastyly"],
+    "correct": "delicious",
+    "explanation": "'taste' は第2文型の動詞で、補語に形容詞を使います。",
+    "incorrectExplanations": {
+      "deliciously": "'-ly' は副詞であり、補語には使えません。",
+      "eat": "動詞の原形で文法的に誤りです。",
+      "tastyly": "'tastyly' は存在しない語です。"
+    }
+  },
+  {
+    "id": 45,
+    "unit": "第3文型",
+    "question": "He plays (  ) every day.",
+    "choices": ["soccer", "happy", "to play", "playing"],
+    "correct": "soccer",
+    "explanation": "'play' は目的語を取る第3文型の動詞で、名詞が必要です。",
+    "incorrectExplanations": {
+      "happy": "形容詞は目的語になれません。",
+      "to play": "不定詞はこの位置には不自然です。",
+      "playing": "'playing' は動名詞で意味が変わります。"
+    }
+  },
+  {
+    "id": 46,
+    "unit": "第4文型",
+    "question": "She gave me (  ).",
+    "choices": ["a present", "give", "to me", "with a smile"],
+    "correct": "a present",
+    "explanation": "'give' は人（me）と物（a present）の両方を取る第4文型の動詞です。",
+    "incorrectExplanations": {
+      "give": "'give' は動詞の原形で文法的に誤りです。",
+      "to me": "間接目的語だけでは文が成立しません。",
+      "with a smile": "意味的には可能でも文型的には補語です。"
+    }
+  },
+  {
+    "id": 47,
+    "unit": "第5文型",
+    "question": "They call him (  ).",
+    "choices": ["Tom", "call", "is", "called"],
+    "correct": "Tom",
+    "explanation": "'call' は目的語と補語を取る第5文型の動詞です。",
+    "incorrectExplanations": {
+      "call": "動詞の原形で文法的に誤りです。",
+      "is": "補語として使えません。",
+      "called": "過去分詞で受動的な意味になるため不適切です。"
+    }
+  },
+  {
+    "id": 48,
+    "unit": "受動態",
+    "question": "The windows were (  ) by the wind.",
+    "choices": ["broken", "broke", "break", "breaking"],
+    "correct": "broken",
+    "explanation": "'be動詞 + 過去分詞' で受動態を作ります。",
+    "incorrectExplanations": {
+      "broke": "過去形であり、受動態では使えません。",
+      "break": "原形で使うのは文法的に誤りです。",
+      "breaking": "進行形の形なので文法に合いません。"
+    }
+  },
+  {
+    "id": 49,
+    "unit": "現在完了",
+    "question": "We have (  ) each other for five years.",
+    "choices": ["known", "know", "knew", "knowing"],
+    "correct": "known",
+    "explanation": "'have known' は現在完了形で「ずっと知っている」を表します。",
+    "incorrectExplanations": {
+      "know": "現在形で現在完了の形になりません。",
+      "knew": "過去形で、継続を表すには使えません。",
+      "knowing": "現在分詞なので文法に合いません。"
+    }
+  },
+  {
+    "id": 50,
+    "unit": "第5文型",
+    "question": "I found the movie (  ).",
+    "choices": ["exciting", "excited", "to excite", "excite"],
+    "correct": "exciting",
+    "explanation": "'find' はSVOCで「その映画が面白いとわかった」という意味になります。",
+    "incorrectExplanations": {
+      "excited": "『感情を持つ側』に使う形容詞で意味が変わります。",
+      "to excite": "不定詞はこの文型には合いません。",
+      "excite": "動詞の原形は使えません。"
+    }
+  },
+  {
+    "id": 51,
+    "unit": "受動態",
+    "question": "The window was (  ) by someone last night.",
+    "choices": ["broke", "broken", "break", "breaking"],
+    "correct": "broken",
+    "explanation": "'was + 過去分詞' は受け身の形で、正しい形は 'was broken' です。",
+    "incorrectExplanations": {
+      "broke": "'broke' は過去形で、受け身には使えません。",
+      "break": "'break' は原形で、文法的に誤りです。",
+      "breaking": "'breaking' は現在分詞で、受け身には使いません。"
+    }
+  },
+  {
+    "id": 52,
+    "unit": "第1文型",
+    "question": "The baby (  ) loudly in the room.",
+    "choices": ["cried", "was", "cries", "crying"],
+    "correct": "cried",
+    "explanation": "第1文型（S+V）は 'The baby cried' のように動作動詞を使います。",
+    "incorrectExplanations": {
+      "was": "'was' は状態動詞で、ここでは動作が必要です。",
+      "cries": "時制が合いません。過去形が必要です。",
+      "crying": "'crying' だけでは動詞の形にならないため不適切です。"
+    }
+  },
+  {
+    "id": 53,
+    "unit": "第2文型",
+    "question": "The sky became (  ).",
+    "choices": ["dark", "darkly", "a cloud", "night"],
+    "correct": "dark",
+    "explanation": "第2文型（SVC）のCは形容詞になることが多く、'became dark' は自然な表現です。",
+    "incorrectExplanations": {
+      "darkly": "'darkly' は副詞で、この位置には使えません。",
+      "a cloud": "名詞を入れると文の意味が不自然になります。",
+      "night": "'night' は時間を表し、この文脈では不適切です。"
+    }
+  },
+  {
+    "id": 54,
+    "unit": "第3文型",
+    "question": "She wrote a letter (  ) her friend.",
+    "choices": ["to", "for", "from", "at"],
+    "correct": "to",
+    "explanation": "'write A to B' の形で『BにAを書く』という意味になります。",
+    "incorrectExplanations": {
+      "for": "'for' は『〜のために』という意味で文意とずれます。",
+      "from": "'from' は出所を表すので文脈に合いません。",
+      "at": "'at' は場所や時間に関連する前置詞です。"
+    }
+  },
+  {
+    "id": 55,
+    "unit": "第4文型",
+    "question": "My father gave me (  ).",
+    "choices": ["a book", "to book", "books", "a books"],
+    "correct": "a book",
+    "explanation": "第4文型では '人 + 物' の語順で、'a book' が正しい形です。",
+    "incorrectExplanations": {
+      "to book": "'to' をつけると第3文型になります。",
+      "books": "文としては可能ですが 'a book' に比べて不自然な文脈です。",
+      "a books": "'a' は単数形にしか使えません。"
+    }
+  },
+  {
+    "id": 56,
+    "unit": "第5文型",
+    "question": "They elected him (  ) of the club.",
+    "choices": ["president", "presidents", "a president", "presidency"],
+    "correct": "president",
+    "explanation": "第5文型（SVOC）でCには名詞がきて、役職名などは無冠詞で使います。",
+    "incorrectExplanations": {
+      "presidents": "複数形は文法的に不自然です。",
+      "a president": "意味的に文として不自然になります。",
+      "presidency": "'presidency' は抽象名詞で不適切です。"
+    }
+  },
+  {
+    "id": 57,
+    "unit": "分詞",
+    "question": "The cake (  ) by my sister was delicious.",
+    "choices": ["made", "making", "make", "makes"],
+    "correct": "made",
+    "explanation": "'The cake made by ～' のように過去分詞で修飾します。",
+    "incorrectExplanations": {
+      "making": "現在分詞では受動の意味を持ちません。",
+      "make": "原形は文法的に誤りです。",
+      "makes": "三単現の形はここでは使えません。"
+    }
+  },
+  {
+    "id": 58,
+    "unit": "副詞",
+    "question": "He runs (  ) every morning.",
+    "choices": ["fast", "fastly", "quick", "quicker"],
+    "correct": "fast",
+    "explanation": "'fast' は副詞としても使われ、走る様子を表します。",
+    "incorrectExplanations": {
+      "fastly": "'fastly' という語はありません。",
+      "quick": "'quick' は形容詞でここでは使えません。",
+      "quicker": "比較級が必要な文脈ではありません。"
+    }
+  },
+  {
+    "id": 59,
+    "unit": "形容詞",
+    "question": "This is a (  ) movie.",
+    "choices": ["boring", "bored", "bore", "bores"],
+    "correct": "boring",
+    "explanation": "'boring' は「退屈させるもの」の意味で、物を修飾する形容詞です。",
+    "incorrectExplanations": {
+      "bored": "'bored' は人の感情に使われます。",
+      "bore": "動詞の原形で使えません。",
+      "bores": "'bores' は動詞の三単現で文法的に誤りです。"
+    }
+  },
+  {
+    "id": 60,
+    "unit": "第5文型",
+    "question": "The teacher made us (  ) the homework again.",
+    "choices": ["do", "did", "done", "doing"],
+    "correct": "do",
+    "explanation": "'make + 人 + 動詞の原形' の形になるのが第5文型の特徴です。",
+    "incorrectExplanations": {
+      "did": "過去形はこの構文では使いません。",
+      "done": "過去分詞は使えません。",
+      "doing": "現在分詞は文法的に誤りです。"
+    }
+  },
+  {
+    "id": 61,
+    "unit": "接続詞",
+    "question": "I was very tired, (  ) I went to bed early.",
+    "choices": ["so", "but", "because", "when"],
+    "correct": "so",
+    "explanation": "'so' は結果を表す接続詞で、「だから」という意味になります。",
+    "incorrectExplanations": {
+      "but": "'but' は対立や逆接を表す接続詞です。",
+      "because": "'because' は理由を表す接続詞です。",
+      "when": "'when' は時間を表す接続詞です。"
+    }
+  },
+  {
+    "id": 62,
+    "unit": "関係代名詞",
+    "question": "The boy (  ) is talking to Mary is my cousin.",
+    "choices": ["who", "which", "where", "when"],
+    "correct": "who",
+    "explanation": "'who' は人を先行詞にとる関係代名詞です。",
+    "incorrectExplanations": {
+      "which": "'which' は物に対して使います。",
+      "where": "'where' は場所を表す関係副詞です。",
+      "when": "'when' は時間を表す関係副詞です。"
+    }
+  },
+  {
+    "id": 63,
+    "unit": "比較",
+    "question": "Mt. Fuji is the (  ) mountain in Japan.",
+    "choices": ["highest", "higher", "high", "more high"],
+    "correct": "highest",
+    "explanation": "'the + 最上級' で「最も～な」という意味になります。",
+    "incorrectExplanations": {
+      "higher": "'higher' は比較級で2つを比較するときに使います。",
+      "high": "'high' は原級で比較の意味はありません。",
+      "more high": "'high' は形容詞で比較級は 'higher' です。"
+    }
+  },
+  {
+    "id": 64,
+    "unit": "同格",
+    "question": "My dream, (  ) is to be a pilot, keeps me working hard.",
+    "choices": ["which", "that", "who", "what"],
+    "correct": "which",
+    "explanation": "同格の関係代名詞には 'which' が使われ、『～という』という意味で先行詞を補足説明します。",
+    "incorrectExplanations": {
+      "that": "'that' は同格で使えません。",
+      "who": "'who' は人に対して使われます。",
+      "what": "'what' は先行詞を含むため使えません。"
+    }
+  },
+  {
+    "id": 65,
+    "unit": "使役動詞",
+    "question": "My father made me (  ) the piano every day.",
+    "choices": ["practice", "practices", "practiced", "to practice"],
+    "correct": "practice",
+    "explanation": "'make + 人 + 動詞の原形' で「～に…させる」という使役表現です。",
+    "incorrectExplanations": {
+      "practices": "主語が三人称単数の現在形で使われますが、ここでは不適切です。",
+      "practiced": "過去形にはしません。使役動詞の後は原形です。",
+      "to practice": "'make' の場合は 'to' は不要です。"
+    }
+  },
+  {
+    "id": 66,
+    "unit": "知覚動詞",
+    "question": "I saw him (  ) into the room.",
+    "choices": ["go", "goes", "went", "to go"],
+    "correct": "go",
+    "explanation": "知覚動詞 'see + 人 + 動詞の原形' で「～が…するのを見る」という意味になります。",
+    "incorrectExplanations": {
+      "goes": "'goes' は三人称単数現在形で不適切です。",
+      "went": "過去形は知覚動詞では使いません。",
+      "to go": "'to' は不要です。"
+    }
+  },
+  {
+    "id": 67,
+    "unit": "比較",
+    "question": "This book is much (  ) than that one.",
+    "choices": [
+      "more interesting",
+      "most interesting",
+      "interested",
+      "interest"
+    ],
+    "correct": "more interesting",
+    "explanation": "'比較級 + than' で「～よりずっと面白い」という意味になります。",
+    "incorrectExplanations": {
+      "most interesting": "'the' を伴わず最上級は使えません。",
+      "interested": "'interested' は人の感情に使います。",
+      "interest": "名詞なので形容詞の比較には使えません。"
+    }
+  },
+  {
+    "id": 68,
+    "unit": "接続詞",
+    "question": "(  ) it was raining, we played soccer.",
+    "choices": ["Although", "Because", "If", "So"],
+    "correct": "Although",
+    "explanation": "'Although' は逆接（～だけれども）を表す接続詞です。",
+    "incorrectExplanations": {
+      "Because": "'Because' は理由（～なので）を表します。",
+      "If": "'If' は条件（～ならば）を表します。",
+      "So": "'So' は結果（だから）を表します。"
+    }
+  },
+  {
+    "id": 69,
+    "unit": "関係代名詞",
+    "question": "This is the pen (  ) I lost yesterday.",
+    "choices": ["which", "who", "what", "where"],
+    "correct": "which",
+    "explanation": "'which' は物を先行詞とする関係代名詞です。",
+    "incorrectExplanations": {
+      "who": "'who' は人に使います。",
+      "what": "'what' は先行詞を含むため使えません。",
+      "where": "'where' は場所に対して使います。"
+    }
+  },
+  {
+    "id": 70,
+    "unit": "知覚動詞",
+    "question": "We heard the baby (  ) in the room.",
+    "choices": ["cry", "cried", "cries", "to cry"],
+    "correct": "cry",
+    "explanation": "'hear + 人 + 動詞の原形' で「～が…するのを聞く」という表現になります。",
+    "incorrectExplanations": {
+      "cried": "過去形は使いません。知覚動詞の後は原形です。",
+      "cries": "三人称単数現在形はここでは不適切です。",
+      "to cry": "'to' は不要です。"
+    }
+  },
+  {
+    "id": 71,
+    "unit": "原級",
+    "question": "This book is (  ) interesting as that one.",
+    "choices": ["as", "so", "too", "very"],
+    "correct": "as",
+    "explanation": "原級比較では as + 原級 + as の形になります。",
+    "incorrectExplanations": {
+      "so": "so は単独で「とても」の意味で使われ、比較には使いません。",
+      "too": "too は「〜すぎる」の意味になり不自然です。",
+      "very": "very は原級比較の構文には使いません。"
+    }
+  },
+  {
+    "id": 72,
+    "unit": "接続詞",
+    "question": "I stayed home (  ) it was raining.",
+    "choices": ["because", "so", "but", "although"],
+    "correct": "because",
+    "explanation": "原因・理由を表す接続詞には because を使います。",
+    "incorrectExplanations": {
+      "so": "so は結果を導く語で、前の文につなげるのは不自然です。",
+      "but": "but は対比・逆接で、文の意味と合いません。",
+      "although": "although は譲歩を表すため、意味が逆になります。"
+    }
+  },
+  {
+    "id": 73,
+    "unit": "疑問詞",
+    "question": "(  ) do you go to school every day?",
+    "choices": ["How", "Where", "What", "Which"],
+    "correct": "How",
+    "explanation": "「どのようにして（手段）」を尋ねるときは How を使います。",
+    "incorrectExplanations": {
+      "Where": "Where は場所を尋ねるときに使います。",
+      "What": "What は物や内容について尋ねるときに使います。",
+      "Which": "Which は選択肢の中から選ぶときに使います。"
+    }
+  },
+  {
+    "id": 74,
+    "unit": "仮定法",
+    "question": "If I (  ) a bird, I could fly to you.",
+    "choices": ["am", "were", "was", "have been"],
+    "correct": "were",
+    "explanation": "仮定法過去では、主語が I や he/she/it でも動詞は were を使います。",
+    "incorrectExplanations": {
+      "am": "am は現在形で、仮定法過去には使えません。",
+      "was": "was は直説法過去で、仮定法では誤りとされます。",
+      "have been": "have been は現在完了で、時制が合いません。"
+    }
+  },
+  {
+    "id": 75,
+    "unit": "現在完了",
+    "question": "I have never (  ) such a beautiful view.",
+    "choices": ["seen", "saw", "see", "seeing"],
+    "correct": "seen",
+    "explanation": "現在完了の形は have + 過去分詞。see の過去分詞は seen です。",
+    "incorrectExplanations": {
+      "saw": "saw は過去形で、完了形には使えません。",
+      "see": "see は原形で、完了形には使えません。",
+      "seeing": "seeing は動名詞/現在分詞で、この文には不適です。"
+    }
+  },
+  {
+    "id": 76,
+    "unit": "原級",
+    "question": "This movie is not (  ) exciting as the last one.",
+    "choices": ["as", "so", "too", "much"],
+    "correct": "as",
+    "explanation": "not as A as B の形で「BほどAではない」という意味を作ります。",
+    "incorrectExplanations": {
+      "so": "so exciting as は古風で現代では使われにくいです。",
+      "too": "too は「〜すぎる」という意味でこの文には合いません。",
+      "much": "much は比較級を強める語で、原級比較には使いません。"
+    }
+  },
+  {
+    "id": 77,
+    "unit": "接続詞",
+    "question": "He didn't come to the party (  ) he was sick.",
+    "choices": ["because", "and", "so", "or"],
+    "correct": "because",
+    "explanation": "理由を述べるときは because を使います。",
+    "incorrectExplanations": {
+      "and": "and は並列を表し、理由にはなりません。",
+      "so": "so は結果を表す接続詞で、順序が逆です。",
+      "or": "or は選択を表すため意味が合いません。"
+    }
+  },
+  {
+    "id": 78,
+    "unit": "現在完了",
+    "question": "Have you (  ) the new library yet?",
+    "choices": ["visited", "visit", "visiting", "visits"],
+    "correct": "visited",
+    "explanation": "現在完了では have/has + 過去分詞が必要です。",
+    "incorrectExplanations": {
+      "visit": "visit は原形で、完了形には使えません。",
+      "visiting": "visiting は現在分詞で、文構造に合いません。",
+      "visits": "visits は三単現の形で、主語と一致しません。"
+    }
+  },
+  {
+    "id": 79,
+    "unit": "疑問詞",
+    "question": "(  ) do you think will win the game?",
+    "choices": ["Who", "What", "Which", "Whose"],
+    "correct": "Who",
+    "explanation": "主語を尋ねる疑問文では Who + 動詞（will win）になります。",
+    "incorrectExplanations": {
+      "What": "What は物や内容についての質問です。",
+      "Which": "Which は選択肢の中から選ぶ場合です。",
+      "Whose": "Whose は「誰の〜」という所有を尋ねるときに使います。"
+    }
+  },
+  {
+    "id": 80,
+    "unit": "仮定法",
+    "question": "If I had studied harder, I (  ) the exam.",
+    "choices": ["would have passed", "would pass", "passed", "have passed"],
+    "correct": "would have passed",
+    "explanation": "仮定法過去完了では if + had + 過去分詞, 主語 + would have + 過去分詞 です。",
+    "incorrectExplanations": {
+      "would pass": "仮定法過去（現在の仮定）になってしまいます。",
+      "passed": "直説法過去になってしまい意味が合いません。",
+      "have passed": "助動詞がないため、文として不完全です。"
+    }
+  },
+  {
+    "id": 81,
+    "unit": "時制",
+    "question": "I (  ) my homework when the phone rang.",
+    "choices": ["did", "was doing", "have done", "am doing"],
+    "correct": "was doing",
+    "explanation": "過去にある特定の時点で進行していた動作なので過去進行形が正解。",
+    "incorrectExplanations": {
+      "did": "単なる過去の動作であり、進行中であったニュアンスが抜けます。",
+      "have done": "現在完了は過去の動作と今をつなぐ表現であり文脈に合いません。",
+      "am doing": "現在形なので時制が一致しません。"
+    }
+  },
+  {
+    "id": 82,
+    "unit": "比較",
+    "question": "This book is (  ) than the one I read yesterday.",
+    "choices": [
+      "more interesting",
+      "most interesting",
+      "as interesting",
+      "the interesting"
+    ],
+    "correct": "more interesting",
+    "explanation": "than があるので比較級 'more interesting' を使う。",
+    "incorrectExplanations": {
+      "most interesting": "最上級なので 'than' と一緒には使いません。",
+      "as interesting": "as ～ as の形と一緒に使います。",
+      "the interesting": "文法的に不自然な表現です。"
+    }
+  },
+  {
+    "id": 83,
+    "unit": "接続詞",
+    "question": "He didn’t come to the party (  ) he was sick.",
+    "choices": ["because", "although", "but", "so"],
+    "correct": "because",
+    "explanation": "理由を表す接続詞 'because' が正しい。",
+    "incorrectExplanations": {
+      "although": "逆説の意味なので文意が逆になります。",
+      "but": "等位接続詞で理由は表せません。",
+      "so": "結果を表す接続詞なので不自然です。"
+    }
+  },
+  {
+    "id": 84,
+    "unit": "疑問詞",
+    "question": "(  ) do you think will win the game?",
+    "choices": ["Who", "Whom", "What", "Which"],
+    "correct": "Who",
+    "explanation": "'think' の後ろに主語が必要なので主格の 'Who' を使います。",
+    "incorrectExplanations": {
+      "Whom": "目的格のため主語として使えません。",
+      "What": "人には使えません。",
+      "Which": "限定された選択肢があるときに使います。"
+    }
+  },
+  {
+    "id": 85,
+    "unit": "仮定法",
+    "question": "If I (  ) more time, I would visit you.",
+    "choices": ["had", "have", "have had", "will have"],
+    "correct": "had",
+    "explanation": "仮定法過去では動詞を過去形にして非現実の条件を表します。",
+    "incorrectExplanations": {
+      "have": "現実の条件になります。",
+      "have had": "仮定法過去完了の形で時制がずれます。",
+      "will have": "未来の確実な予定に見え、不自然です。"
+    }
+  },
+  {
+    "id": 86,
+    "unit": "現在完了",
+    "question": "I (  ) never seen such a beautiful view.",
+    "choices": ["have", "has", "had", "was"],
+    "correct": "have",
+    "explanation": "'I' に合わせて 'have' を使い、現在完了形の基本形になります。",
+    "incorrectExplanations": {
+      "has": "'has' は三人称単数に使います。",
+      "had": "過去完了になります。",
+      "was": "進行形や受動態には使われません。"
+    }
+  },
+  {
+    "id": 87,
+    "unit": "関係代名詞",
+    "question": "The girl (  ) is talking to Tom is my sister.",
+    "choices": ["who", "which", "where", "what"],
+    "correct": "who",
+    "explanation": "'who' は人を先行詞とする関係代名詞で主格の役割を果たします。",
+    "incorrectExplanations": {
+      "which": "物に使う関係代名詞です。",
+      "where": "場所に使います。",
+      "what": "'what' は関係代名詞ではありません。"
+    }
+  },
+  {
+    "id": 88,
+    "unit": "原級比較",
+    "question": "This movie is as exciting (  ) that one.",
+    "choices": ["as", "than", "like", "so"],
+    "correct": "as",
+    "explanation": "'as ～ as' の原級比較に使うのは 'as' です。",
+    "incorrectExplanations": {
+      "than": "比較級に使います。",
+      "like": "'like' は前置詞で文型が崩れます。",
+      "so": "原級比較ではなく強調に使います。"
+    }
+  },
+  {
+    "id": 89,
+    "unit": "使役動詞",
+    "question": "She made me (  ) the room.",
+    "choices": ["clean", "cleaned", "cleans", "cleaning"],
+    "correct": "clean",
+    "explanation": "'make + 人 + 動詞の原形' の形をとる使役動詞の用法です。",
+    "incorrectExplanations": {
+      "cleaned": "過去形は使えません。",
+      "cleans": "三単現にしてしまうと文法的に誤りです。",
+      "cleaning": "動名詞を使うのは誤りです。"
+    }
+  },
+  {
+    "id": 90,
+    "unit": "知覚動詞",
+    "question": "I saw him (  ) the guitar on the stage.",
+    "choices": ["play", "played", "plays", "playing"],
+    "correct": "play",
+    "explanation": "知覚動詞 + 人 + 動詞の原形（またはing）で、動作全体を見た場合は原形を使います。",
+    "incorrectExplanations": {
+      "played": "原形または ing が正しい形です。",
+      "plays": "三単現にしてしまうと主語と動詞の関係が崩れます。",
+      "playing": "ing も文として成立しますが、全体を見たことを強調するには原形が自然です。"
+    }
+  },
+  {
+    "id": 91,
+    "unit": "現在形と三単現",
+    "question": "He (  ) to school every day.",
+    "choices": ["go", "goes", "going", "gone"],
+    "correct": "goes",
+    "explanation": "主語が三人称単数（He）の場合、現在形の動詞には -s をつけます。",
+    "incorrectExplanations": {
+      "go": "三人称単数の現在形では動詞に -s をつける必要があります。",
+      "going": "going は現在進行形や動名詞に使われます。",
+      "gone": "gone は go の過去分詞形です。"
+    }
+  },
+  {
+    "id": 92,
+    "unit": "助動詞",
+    "question": "You (  ) be quiet in the library.",
+    "choices": ["must", "should", "can", "will"],
+    "correct": "must",
+    "explanation": "'must' は強い義務を表します。「図書館では静かにしなければならない」という意味です。",
+    "incorrectExplanations": {
+      "should": "'should' は義務を表しますが、'must' より弱い表現です。",
+      "can": "'can' は可能や許可を表します。",
+      "will": "'will' は未来の意志や予測を表します。"
+    }
+  },
+  {
+    "id": 93,
+    "unit": "現在完了形",
+    "question": "I (  ) lived in Tokyo for five years.",
+    "choices": ["have", "has", "had", "am"],
+    "correct": "have",
+    "explanation": "主語が I の場合、現在完了形は 'have + 過去分詞' です。",
+    "incorrectExplanations": {
+      "has": "'has' は三人称単数（He, She, It）で使います。",
+      "had": "'had' は過去完了形で使います。",
+      "am": "'am' は be 動詞の現在形で、現在完了形では使いません。"
+    }
+  },
+  {
+    "id": 94,
+    "unit": "動名詞と不定詞",
+    "question": "I enjoy (  ) tennis.",
+    "choices": ["to play", "playing", "played", "plays"],
+    "correct": "playing",
+    "explanation": "'enjoy' の後ろには動名詞（-ing 形）を使います。",
+    "incorrectExplanations": {
+      "to play": "'enjoy' の後には不定詞（to ～）ではなく動名詞を使います。",
+      "played": "'played' は過去形で文法的に不自然です。",
+      "plays": "'plays' は三単現の現在形で、目的語にはなりません。"
+    }
+  },
+  {
+    "id": 95,
+    "unit": "接続詞（if / when）",
+    "question": "If it (  ), the game will be canceled.",
+    "choices": ["rains", "rained", "rain", "will rain"],
+    "correct": "rains",
+    "explanation": "'If' 節が現在形、主節が未来形というのが基本の形です。",
+    "incorrectExplanations": {
+      "rained": "'rained' を使うと仮定法過去の意味になります。",
+      "rain": "'rain' は原形で、三単現には -s が必要です。",
+      "will rain": "'If' 節の中では未来のことでも現在形を使います。"
+    }
+  },
+  {
+    "id": 96,
+    "unit": "be動詞",
+    "question": "She (  ) a student.",
+    "choices": ["am", "is", "are", "be"],
+    "correct": "is",
+    "explanation": "三人称単数の主語 'She' に対する be 動詞は 'is' です。",
+    "incorrectExplanations": {
+      "am": "'am' は主語が 'I' のときに使います。",
+      "are": "'are' は複数形や 'you' のときに使います。",
+      "be": "'be' は不定詞や命令文などで使いますが、現在形では使いません。"
+    }
+  },
+  {
+    "id": 97,
+    "unit": "一般動詞",
+    "question": "My brother (  ) soccer every weekend.",
+    "choices": ["play", "plays", "playing", "played"],
+    "correct": "plays",
+    "explanation": "三人称単数の現在形では動詞に -s をつけます。",
+    "incorrectExplanations": {
+      "play": "'play' は原形で、三人称単数には -s が必要です。",
+      "playing": "'playing' は動名詞や進行形に使います。",
+      "played": "'played' は過去形で、毎週の習慣には使いません。"
+    }
+  },
+  {
+    "id": 98,
+    "unit": "冠詞",
+    "question": "He bought (  ) apple at the store.",
+    "choices": ["a", "an", "the", "no"],
+    "correct": "an",
+    "explanation": "母音で始まる名詞（apple）の前には 'an' を使います。",
+    "incorrectExplanations": {
+      "a": "'a' は子音で始まる単語の前に使います。",
+      "the": "'the' は特定の物を指す時に使いますが、ここでは初出なので不適です。",
+      "no": "冠詞が必要な文なので、空欄にはできません。"
+    }
+  },
+  {
+    "id": 99,
+    "unit": "名詞",
+    "question": "There are many (  ) in the park.",
+    "choices": ["child", "children", "childs", "childes"],
+    "correct": "children",
+    "explanation": "'children' は 'child' の正しい複数形です。",
+    "incorrectExplanations": {
+      "child": "'child' は単数形で、'many' の後には複数形を使います。",
+      "childs": "名詞 'child' の複数形は不規則で 'childs' にはなりません。",
+      "childes": "この形は存在しません。"
+    }
+  },
+  {
+    "id": 100,
+    "unit": "形容詞",
+    "question": "This question is too (  ) for me.",
+    "choices": ["hard", "hardly", "harden", "harder"],
+    "correct": "hard",
+    "explanation": "'hard' は「難しい」という意味の形容詞です。",
+    "incorrectExplanations": {
+      "hardly": "'hardly' は「ほとんど～ない」という副詞です。",
+      "harden": "'harden' は「固くする」という動詞です。",
+      "harder": "'harder' は比較級で、'too' の後には原級を使うのが自然です。"
+    }
+  },
+  {
+    "id": 101,
+    "unit": "過去進行形",
+    "question": "I (  ) TV when he called me.",
+    "choices": ["watched", "was watching", "watch", "have watched"],
+    "correct": "was watching",
+    "explanation": "過去のある時点で進行していた動作には過去進行形を使います。",
+    "incorrectExplanations": {
+      "watched": "単純な過去では「〜していた」の意味が出せません。",
+      "watch": "'watch' は現在形で時制が合いません。",
+      "have watched": "現在完了は「〜したことがある」などの経験や完了を表します。"
+    }
+  },
+  {
+    "id": 102,
+    "unit": "分詞",
+    "question": "(  ) by her beauty, he couldn't speak.",
+    "choices": ["Surprising", "Surprised", "Surprise", "Surprises"],
+    "correct": "Surprised",
+    "explanation": "'be surprised by～' の受動の意味で使われています。",
+    "incorrectExplanations": {
+      "Surprising": "'surprising' は能動の意味で、「驚かせる側」に使います。",
+      "Surprise": "原形動詞でこの文脈には不適です。",
+      "Surprises": "三単現の現在形で、文法的に不自然です。"
+    }
+  },
+  {
+    "id": 103,
+    "unit": "副詞",
+    "question": "He runs (  ) fast for his age.",
+    "choices": ["very", "too", "so", "much"],
+    "correct": "very",
+    "explanation": "'very' は形容詞・副詞の強調に使われます。「とても速く」という意味です。",
+    "incorrectExplanations": {
+      "too": "'too fast' は「速すぎて～できない」など否定的な文脈で使います。",
+      "so": "'so' の後には通常 that 節が必要になります。",
+      "much": "'much' は副詞の原級には使いません。"
+    }
+  },
+  {
+    "id": 104,
+    "unit": "現在完了",
+    "question": "I (  ) lost my wallet.",
+    "choices": ["have", "has", "had", "am"],
+    "correct": "have",
+    "explanation": "'I' に対する現在完了形は 'have + 過去分詞' です。",
+    "incorrectExplanations": {
+      "has": "'has' は三人称単数で使います。",
+      "had": "過去完了形（過去のさらに過去）です。",
+      "am": "'am' は be 動詞で、完了形には使えません。"
+    }
+  },
+  {
+    "id": 105,
+    "unit": "第1文型",
+    "question": "He (  ) fast.",
+    "choices": ["runs", "run", "running", "ran fastly"],
+    "correct": "runs",
+    "explanation": "第1文型は『主語＋動詞』の基本形で、'He runs fast.'が正しい形です。",
+    "incorrectExplanations": {
+      "run": "'He' に対して三単現の 'runs' を使う必要があります。",
+      "running": "文として文法的に成り立ちません。",
+      "ran fastly": "'fast' は副詞であり 'fastly' とは言いません。"
+    }
+  },
+  {
+    "id": 106,
+    "unit": "第2文型",
+    "question": "The soup smells (  ).",
+    "choices": ["delicious", "deliciously", "delight", "delighted"],
+    "correct": "delicious",
+    "explanation": "'smell' は感覚動詞で、補語に形容詞をとる第2文型です。",
+    "incorrectExplanations": {
+      "deliciously": "'deliciously' は副詞で、第2文型の補語には不適です。",
+      "delight": "'delight' は名詞または動詞で不自然です。",
+      "delighted": "'delighted' は人の感情を表す過去分詞でこの文脈には不適です。"
+    }
+  },
+  {
+    "id": 107,
+    "unit": "第3文型",
+    "question": "She found (  ) key under the table.",
+    "choices": ["a", "an", "the", "×"],
+    "correct": "the",
+    "explanation": "特定の鍵を見つけたという意味で 'the' を使います。",
+    "incorrectExplanations": {
+      "a": "'a key' だとどの鍵か特定できません。",
+      "an": "'an' は母音で始まる単語の前に使います。",
+      "×": "冠詞は名詞の前に必要です。"
+    }
+  },
+  {
+    "id": 108,
+    "unit": "第4文型",
+    "question": "He gave me (  ) book.",
+    "choices": ["a", "an", "the", "×"],
+    "correct": "a",
+    "explanation": "第4文型（SVOO）の形で『人に物を与える』とき、物に適切な冠詞が必要です。",
+    "incorrectExplanations": {
+      "an": "'book' は母音で始まっていないため 'an' は使えません。",
+      "the": "特定の本でなければ 'a' を使います。",
+      "×": "冠詞がないと文法的に不完全です。"
+    }
+  },
+  {
+    "id": 109,
+    "unit": "第5文型",
+    "question": "She made me (  ) happy.",
+    "choices": ["feel", "feeling", "felt", "to feel"],
+    "correct": "feel",
+    "explanation": "第5文型（SVOC）で使役や知覚の構文では原形動詞を使います。",
+    "incorrectExplanations": {
+      "feeling": "'feeling' は進行形や動名詞の形で不自然です。",
+      "felt": "'felt' は過去形で時制が合いません。",
+      "to feel": "この場合 'to 不定詞' は使いません。"
+    }
+  },
+  {
+    "id": 110,
+    "unit": "同格",
+    "question": "My friend (  ) a dentist, lives in Tokyo.",
+    "choices": ["who", "which", "a", ","],
+    "correct": ",",
+    "explanation": "同格の名詞句を挿入する際にはカンマを用いて 'my friend, a dentist, ...' の形にします。",
+    "incorrectExplanations": {
+      "who": "'who' を使うと関係代名詞になり、意味が変わります。",
+      "which": "'which' は人には使えません。",
+      "a": "この位置に 'a' を置くと文の構造が破綻します。"
+    }
+  },
+  {
+    "id": 111,
+    "unit": "使役動詞",
+    "question": "My teacher made me (  ) the homework again.",
+    "choices": ["do", "to do", "did", "doing"],
+    "correct": "do",
+    "explanation": "'make 人 動詞の原形' という形が使役の基本です。",
+    "incorrectExplanations": {
+      "to do": "make の後は原形動詞であり、不定詞ではありません。",
+      "did": "過去形を入れると文全体が不自然になります。",
+      "doing": "doing にすると進行の意味になり不自然です。"
+    }
+  },
+  {
+    "id": 112,
+    "unit": "知覚動詞",
+    "question": "I saw him (  ) into the room.",
+    "choices": ["go", "went", "gone", "going"],
+    "correct": "go",
+    "explanation": "知覚動詞の後は原形動詞が基本です（see 人 do）。",
+    "incorrectExplanations": {
+      "went": "went は過去形で使えません。",
+      "gone": "'gone' は過去分詞で不適切です。",
+      "going": "going を使うと進行中というニュアンスになり、文が変化します。"
+    }
+  },
+  {
+    "id": 113,
+    "unit": "原級比較",
+    "question": "This movie is (  ) as that one.",
+    "choices": [
+      "as interesting",
+      "more interesting",
+      "so interesting",
+      "the most interesting"
+    ],
+    "correct": "as interesting",
+    "explanation": "'as ～ as' の形で原級比較が作られます。",
+    "incorrectExplanations": {
+      "more interesting": "比較級の構文にはなっていません。",
+      "so interesting": "'so' だけでは比較になりません。",
+      "the most interesting": "最上級は3つ以上のものを比較するときに使います。"
+    }
+  },
+  {
+    "id": 114,
+    "unit": "時制",
+    "question": "He (  ) to the park every Sunday.",
+    "choices": ["goes", "went", "going", "go"],
+    "correct": "goes",
+    "explanation": "毎週日曜日という習慣なので現在形（三単現）を使います。",
+    "incorrectExplanations": {
+      "went": "過去形ではなく、現在の習慣の話です。",
+      "going": "going では文として成立しません。",
+      "go": "三人称単数には 'goes' を使います。"
+    }
+  },
+  {
+    "id": 115,
+    "unit": "現在完了",
+    "question": "She has (  ) in Tokyo for five years.",
+    "choices": ["lived", "live", "lives", "living"],
+    "correct": "lived",
+    "explanation": "現在完了は 'have/has + 過去分詞' の形をとります。",
+    "incorrectExplanations": {
+      "live": "原形は使えません。",
+      "lives": "三単現の現在形は使えません。",
+      "living": "動名詞・進行形では文法が成立しません。"
+    }
+  },
+  {
+    "id": 116,
+    "unit": "使役動詞",
+    "question": "My mother let me (  ) with my friends.",
+    "choices": ["go", "to go", "went", "going"],
+    "correct": "go",
+    "explanation": "'let 人 動詞の原形' という形が使役動詞 let の基本です。",
+    "incorrectExplanations": {
+      "to go": "let の後は不定詞ではなく原形を使います。",
+      "went": "過去形は使えません。",
+      "going": "進行形では意味が変わります。"
+    }
+  },
+  {
+    "id": 117,
+    "unit": "知覚動詞",
+    "question": "I heard the baby (  ) in the room.",
+    "choices": ["cry", "cries", "crying", "cried"],
+    "correct": "cry",
+    "explanation": "知覚動詞の後は原形（もしくは ing）だが、ここでは動作の全体を見ているので原形。",
+    "incorrectExplanations": {
+      "cries": "三単現の現在形はこの文には使いません。",
+      "crying": "進行中の動作を強調したい時に使います。",
+      "cried": "過去形ではなく原形が必要です。"
+    }
+  },
+  {
+    "id": 118,
+    "unit": "原級比較",
+    "question": "Ken is (  ) tall as Mike.",
+    "choices": ["as", "so", "too", "the same"],
+    "correct": "as",
+    "explanation": "'as ～ as' 構文の前半に使うのは 'as' です。",
+    "incorrectExplanations": {
+      "so": "'so tall as' は否定文で使われることがありますが、肯定文では 'as'。",
+      "too": "too tall as とは言いません。",
+      "the same": "'the same' は比較構文には使いません。"
+    }
+  },
+  {
+    "id": 119,
+    "unit": "時制",
+    "question": "By the time he arrived, I (  ) my lunch.",
+    "choices": ["had finished", "finished", "have finished", "was finishing"],
+    "correct": "had finished",
+    "explanation": "'by the time + 過去' のとき、もう一方は過去完了になります。",
+    "incorrectExplanations": {
+      "finished": "時制の前後関係がわかりづらくなります。",
+      "have finished": "現在完了は過去の特定時点には使いません。",
+      "was finishing": "過去進行形だと文が不自然になります。"
+    }
+  },
+  {
+    "id": 120,
+    "unit": "時制",
+    "question": "I will call you when he (  ) back.",
+    "choices": ["comes", "will come", "came", "is coming"],
+    "correct": "comes",
+    "explanation": "未来のことでも、'when' の後は現在形を使います。",
+    "incorrectExplanations": {
+      "will come": "'when' 節内では未来でも現在形を使います。",
+      "came": "過去形は不自然です。",
+      "is coming": "進行形では未来の確定的予定を表す時に限ります。"
+    }
+  },
+  {
+    "id": 121,
+    "unit": "読解",
+    "question": "Tom usually gets up at 6:30, but today he woke up at 8:00.",
+    "choices": [
+      "Tom always gets up at 8:00.",
+      "Tom was late today.",
+      "Tom never gets up early.",
+      "Tom got up earlier than usual today."
+    ],
+    "correct": "Tom was late today.",
+    "explanation": "普段は6:30に起きるが、今日は8:00に起きた＝遅く起きた。",
+    "incorrectExplanations": {
+      "Tom always gets up at 8:00.": "本文では usually 6:30 とあり、いつも8:00とは書かれていません。",
+      "Tom never gets up early.": "usually とあるので、早く起きることはあるはずです。",
+      "Tom got up earlier than usual today.": "今日は普段より遅く起きています。"
+    }
+  },
+  {
+    "id": 122,
+    "unit": "読解",
+    "question": "My sister went to the library to borrow some books.",
+    "choices": [
+      "She went there to return books.",
+      "She went to play with her friends.",
+      "She went there to get some books.",
+      "She went shopping for clothes."
+    ],
+    "correct": "She went there to get some books.",
+    "explanation": "borrow some books＝本を借りるため＝本を手に入れるために行った。",
+    "incorrectExplanations": {
+      "She went there to return books.": "借りに行ったのであって、返しに行ったわけではありません。",
+      "She went to play with her friends.": "遊びに行ったという情報はありません。",
+      "She went shopping for clothes.": "買い物ではなく、図書館で本を借りに行きました。"
+    }
+  },
+  {
+    "id": 123,
+    "unit": "読解",
+    "question": "It was raining, so we stayed at home all day.",
+    "choices": [
+      "We went out to play.",
+      "We stayed at home because of the rain.",
+      "It was sunny and warm.",
+      "We visited our friends."
+    ],
+    "correct": "We stayed at home because of the rain.",
+    "explanation": "雨だったので家にいた＝雨が理由で家にいた。",
+    "incorrectExplanations": {
+      "We went out to play.": "雨だったので外に出たとは考えにくいです。",
+      "It was sunny and warm.": "It was raining とあるので、晴れていたとは言えません。",
+      "We visited our friends.": "友達を訪ねたとは書かれていません。"
+    }
+  },
+  {
+    "id": 124,
+    "unit": "読解",
+    "question": "Ken was watching TV when his mother came home.",
+    "choices": [
+      "Ken was sleeping when his mother came home.",
+      "Ken's mother was watching TV.",
+      "Ken was watching TV before his mother got home.",
+      "Ken was studying when his mother came home."
+    ],
+    "correct": "Ken was watching TV before his mother got home.",
+    "explanation": "「〜していたとき」にあたる表現なので、母が帰宅する前からTVを見ていた。",
+    "incorrectExplanations": {
+      "Ken was sleeping when his mother came home.": "寝ていたという記述はありません。",
+      "Ken's mother was watching TV.": "母は帰宅しただけで、TVを見ていたのはKenです。",
+      "Ken was studying when his mother came home.": "勉強していたのではなく、TVを見ていました。"
+    }
+  },
+  {
+    "id": 125,
+    "unit": "読解",
+    "question": "I have lived in this town for five years.",
+    "choices": [
+      "I will move to this town next year.",
+      "I started living here five years ago.",
+      "I lived here only last year.",
+      "I have never lived in this town."
+    ],
+    "correct": "I started living here five years ago.",
+    "explanation": "現在完了（継続）の表現で、5年前から今まで住み続けていることを示す。",
+    "incorrectExplanations": {
+      "I will move to this town next year.": "未来のことは書かれていません。",
+      "I lived here only last year.": "5年間住んでいるとあるので、1年だけではありません。",
+      "I have never lived in this town.": "逆にずっと住んでいると書いてあります。"
+    }
+  },
+  {
+    "id": 126,
+    "unit": "読解",
+    "question": "Mike went to the park with his dog. They played with a ball for an hour. After that, they took a rest under a tree.",
+    "choices": [
+      "Mike went to the park to read a book.",
+      "Mike and his dog played indoors.",
+      "Mike and his dog rested after playing.",
+      "Mike lost his dog in the park."
+    ],
+    "correct": "Mike and his dog rested after playing.",
+    "explanation": "3文目に「木の下で休んだ」とあるので、遊んだあとに休んだことが正しいです。",
+    "incorrectExplanations": {
+      "Mike went to the park to read a book.": "本を読みに行ったとは書かれていません。",
+      "Mike and his dog played indoors.": "公園に行ったので屋外で遊んだはずです。",
+      "Mike lost his dog in the park.": "犬を失くしたという記述はありません。"
+    }
+  },
+  {
+    "id": 127,
+    "unit": "読解",
+    "question": "Yumi made some cookies for her friends. She put them in a box and gave it to Taro. Taro said they were delicious.",
+    "choices": [
+      "Yumi gave the cookies to her teacher.",
+      "Taro didn’t like the cookies.",
+      "Yumi gave the cookies to Taro.",
+      "Yumi made cookies with Taro."
+    ],
+    "correct": "Yumi gave the cookies to Taro.",
+    "explanation": "2文目に「箱に入れてTaroに渡した」と明記されています。",
+    "incorrectExplanations": {
+      "Yumi gave the cookies to her teacher.": "先生に渡したとは書かれていません。",
+      "Taro didn’t like the cookies.": "Taroは「おいしい」と言っているので逆です。",
+      "Yumi made cookies with Taro.": "一緒に作ったとは書かれていません。"
+    }
+  },
+  {
+    "id": 128,
+    "unit": "読解",
+    "question": "Our school festival was held last weekend. I joined the drama club’s play. Many people came and watched our performance.",
+    "choices": [
+      "The school festival is next weekend.",
+      "Few people came to the festival.",
+      "I performed in a play during the festival.",
+      "I watched a drama but didn’t act."
+    ],
+    "correct": "I performed in a play during the festival.",
+    "explanation": "2文目に「劇に参加した」とあるので、演じたのが正解です。",
+    "incorrectExplanations": {
+      "The school festival is next weekend.": "last weekend（先週末）とあるので誤り。",
+      "Few people came to the festival.": "many people came（たくさん来た）とあるので逆の内容。",
+      "I watched a drama but didn’t act.": "自分が劇に参加しているので誤りです。"
+    }
+  },
+  {
+    "id": 129,
+    "unit": "読解",
+    "question": "Ken has a pet cat. He feeds it every morning and plays with it after school. His cat loves to chase balls and climb on the sofa.",
+    "choices": [
+      "Ken doesn’t like animals.",
+      "Ken’s cat is active and playful.",
+      "Ken feeds his cat once a week.",
+      "Ken has a pet dog."
+    ],
+    "correct": "Ken’s cat is active and playful.",
+    "explanation": "遊ぶことやソファによじ登ることから、活発で遊び好きな猫だとわかります。",
+    "incorrectExplanations": {
+      "Ken doesn’t like animals.": "猫を飼って世話もしているので、動物嫌いとは言えません。",
+      "Ken feeds his cat once a week.": "毎朝（every morning）世話をしているので誤り。",
+      "Ken has a pet dog.": "猫（cat）と明記されています。"
+    }
+  },
+  {
+    "id": 130,
+    "unit": "読解",
+    "question": "Emma is good at singing. She practices every day for the school concert. Her teacher says she is one of the best singers in the class.",
+    "choices": [
+      "Emma practices singing once a month.",
+      "Emma doesn't enjoy singing.",
+      "Emma is a talented singer.",
+      "Emma is not in the school concert."
+    ],
+    "correct": "Emma is a talented singer.",
+    "explanation": "毎日練習していて、先生も褒めていることから「才能がある」と言える。",
+    "incorrectExplanations": {
+      "Emma practices singing once a month.": "every day と書かれているので誤り。",
+      "Emma doesn't enjoy singing.": "歌が得意で練習しているので、楽しんでいる可能性が高いです。",
+      "Emma is not in the school concert.": "練習しているのは concert のためなので出場します。"
+    }
+  }
+]
