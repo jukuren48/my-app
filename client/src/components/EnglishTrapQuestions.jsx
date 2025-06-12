@@ -20,11 +20,12 @@ export default function EnglishTrapQuestions() {
   const startTime = useRef(Date.now());
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/questions")
+    fetch(`/api/questions`)
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data);
-        setUnits([...new Set(data.map((q) => q.unit))]);
+        const allUnits = Array.from(new Set(data.map((q) => q.unit)));
+        setUnits(allUnits);
       });
   }, []);
 
