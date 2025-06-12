@@ -22,7 +22,7 @@ export default function EnglishTrapQuestions() {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/questions.json`)
+    fetch("http://localhost:5000/questions")
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data);
