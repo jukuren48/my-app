@@ -1,0 +1,9 @@
+/* index.css : 仮で最低限だけ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 必要なら追加カスタムCSSを書けます */
+body {
+  font-family: sans-serif;
+}
