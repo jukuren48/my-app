@@ -1,136 +1,162 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 
 export default function AdminPage() {
   const [questions, setQuestions] = useState([]);
+  const [editingQuestion, setEditingQuestion] = useState(null);
   const [form, setForm] = useState({
     unit: "",
     question: "",
     choices: ["", "", "", ""],
     correct: "",
     explanation: "",
-    incorrectExplanations: ["", "", "", ""],
+    incorrectExplanations: { "": "" },
   });
 
   useEffect(() => {
     fetchQuestions();
   }, []);
 
-  const fetchQuestions = () => {
-    axios.get("/api/questions").then((res) => {
-      setQuestions(res.data);
-    });
+  const fetchQuestions = async () => {
+    const res = await fetch("/api/questions");
+    const data = await res.json();
+    setQuestions(data);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+  const handleInputChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleChoiceChange = (index, value) => {
-    const newChoices = [...form.choices];
-    newChoices[index] = value;
-    setForm((prev) => ({ ...prev, choices: newChoices }));
+    const updatedChoices = [...form.choices];
+    updatedChoices[index] = value;
+    setForm({ ...form, choices: updatedChoices });
   };
 
-  const handleIncorrectChange = (index, value) => {
-    const newIncorrect = [...form.incorrectExplanations];
-    newIncorrect[index] = value;
-    setForm((prev) => ({ ...prev, incorrectExplanations: newIncorrect }));
-  };
-
-  const handleSubmit = () => {
-    if (!form.choices.includes(form.correct)) {
-      alert("正解は選択肢の中から選んでください");
-      return;
-    }
-    axios.post("/api/questions", form).then(() => {
-      fetchQuestions();
-      setForm({
-        unit: "",
-        question: "",
-        choices: ["", "", "", ""],
-        correct: "",
-        explanation: "",
-        incorrectExplanations: ["", "", "", ""],
-      });
+  const handleIncorrectExplanationChange = (choice, value) => {
+    setForm({
+      ...form,
+      incorrectExplanations: { ...form.incorrectExplanations, [choice]: value },
     });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!editingQuestion) {
+      await fetch("/api/questions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+    } else {
+      await fetch("/api/questions", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, id: editingQuestion.id }),
+      });
+    }
+    setForm({
+      unit: "",
+      question: "",
+      choices: ["", "", "", ""],
+      correct: "",
+      explanation: "",
+      incorrectExplanations: { "": "" },
+    });
+    setEditingQuestion(null);
+    fetchQuestions();
+  };
+
+  const handleEdit = (q) => {
+    setEditingQuestion(q);
+    setForm(q);
+  };
+
+  const handleDelete = async (id) => {
+    await fetch(`/api/questions?id=${id}`, { method: "DELETE" });
+    fetchQuestions();
   };
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">教師用問題管理</h1>
+      <h1 className="text-2xl font-bold mb-4">問題登録・編集画面</h1>
 
-      <div className="mb-8 p-4 border rounded shadow bg-gray-50">
-        <h2 className="font-bold mb-2">新規問題作成</h2>
-
+      <form className="mb-8 space-y-4" onSubmit={handleSubmit}>
         <input
-          className="border p-2 rounded w-full mb-2"
           name="unit"
           value={form.unit}
-          onChange={handleChange}
-          placeholder="単元名"
+          onChange={handleInputChange}
+          placeholder="単元"
+          className="border p-2 w-full"
         />
         <input
-          className="border p-2 rounded w-full mb-2"
           name="question"
           value={form.question}
-          onChange={handleChange}
+          onChange={handleInputChange}
           placeholder="問題文"
+          className="border p-2 w-full"
         />
-
-        <div className="grid grid-cols-1 gap-2 mb-2">
-          {form.choices.map((choice, idx) => (
-            <div key={idx} className="flex gap-2 items-center">
-              <input
-                className="border p-2 rounded flex-1"
-                value={choice}
-                onChange={(e) => handleChoiceChange(idx, e.target.value)}
-                placeholder={`選択肢${idx + 1}`}
-              />
-              <input
-                className="border p-2 rounded flex-1"
-                value={form.incorrectExplanations[idx]}
-                onChange={(e) => handleIncorrectChange(idx, e.target.value)}
-                placeholder={`誤答解説${idx + 1}`}
-              />
-            </div>
-          ))}
-        </div>
-
+        {form.choices.map((choice, idx) => (
+          <div key={idx} className="flex items-center space-x-2">
+            <input
+              value={choice}
+              onChange={(e) => handleChoiceChange(idx, e.target.value)}
+              placeholder={`選択肢 ${idx + 1}`}
+              className="border p-2 w-full"
+            />
+            <input
+              value={form.incorrectExplanations[choice] || ""}
+              onChange={(e) =>
+                handleIncorrectExplanationChange(choice, e.target.value)
+              }
+              placeholder="誤答の解説"
+              className="border p-2 w-full"
+            />
+          </div>
+        ))}
         <input
-          className="border p-2 rounded w-full mb-2"
           name="correct"
           value={form.correct}
-          onChange={handleChange}
-          placeholder="正解の選択肢を正確に入力"
+          onChange={handleInputChange}
+          placeholder="正解"
+          className="border p-2 w-full"
         />
         <input
-          className="border p-2 rounded w-full mb-2"
           name="explanation"
           value={form.explanation}
-          onChange={handleChange}
+          onChange={handleInputChange}
           placeholder="正解の解説"
+          className="border p-2 w-full"
         />
-
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded"
-          onClick={handleSubmit}
+          type="submit"
+          className="bg-blue-500 text-white px-4 py-2 rounded"
         >
-          登録
+          {editingQuestion ? "更新" : "新規登録"}
         </button>
-      </div>
+      </form>
 
-      <h2 className="font-bold mb-4">現在登録されている問題</h2>
-      <ul className="space-y-2">
-        {questions.map((q, idx) => (
-          <li key={idx} className="p-2 border rounded bg-white">
-            <div>
-              <b>{q.unit}</b>: {q.question}
-            </div>
-          </li>
+      <h2 className="text-xl font-bold mb-2">登録済みの問題</h2>
+      <div className="space-y-2">
+        {questions.map((q) => (
+          <div key={q.id} className="border p-4 rounded">
+            <p>
+              <strong>{q.unit}</strong> : {q.question}
+            </p>
+            <button
+              onClick={() => handleEdit(q)}
+              className="bg-yellow-400 text-white px-2 py-1 mr-2"
+            >
+              編集
+            </button>
+            <button
+              onClick={() => handleDelete(q.id)}
+              className="bg-red-500 text-white px-2 py-1"
+            >
+              削除
+            </button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

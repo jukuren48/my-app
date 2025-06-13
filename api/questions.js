@@ -1,35 +1,58 @@
-import express from "express";
-import cors from "cors";
 import fs from "fs/promises";
 import path from "path";
+import { nanoid } from "nanoid";
 
-const app = express();
-const port = process.env.PORT || 5000;
+const filePath = path.join(process.cwd(), "api", "questions.json");
 
-app.use(cors());
-app.use(express.json());
-
-const dataPath = path.resolve("public/questions.json");
-
-app.get("/api/questions", async (req, res) => {
-  try {
-    const data = await fs.readFile(dataPath, "utf-8");
-    res.json(JSON.parse(data));
-  } catch (err) {
-    res.status(500).json({ error: "読み込み失敗" });
+export default async function handler(req, res) {
+  if (req.method === "GET") {
+    try {
+      const data = await fs.readFile(filePath, "utf-8");
+      res.status(200).json(JSON.parse(data));
+    } catch (err) {
+      res.status(500).json({ error: "読み込みエラー" });
+    }
   }
-});
 
-app.post("/api/questions", async (req, res) => {
-  try {
-    const newQuestions = req.body;
-    await fs.writeFile(dataPath, JSON.stringify(newQuestions, null, 2));
-    res.json({ message: "保存成功" });
-  } catch (err) {
-    res.status(500).json({ error: "保存失敗" });
+  if (req.method === "POST") {
+    try {
+      const newQuestion = req.body;
+      const data = await fs.readFile(filePath, "utf-8");
+      const questions = JSON.parse(data);
+      newQuestion.id = nanoid();
+      questions.push(newQuestion);
+      await fs.writeFile(filePath, JSON.stringify(questions, null, 2));
+      res.status(201).json(newQuestion);
+    } catch (err) {
+      res.status(500).json({ error: "書き込みエラー" });
+    }
   }
-});
 
-app.listen(port, () => {
-  console.log(`✅ サーバー起動: http://localhost:${port}`);
-});
+  if (req.method === "PUT") {
+    try {
+      const updatedQuestion = req.body;
+      const data = await fs.readFile(filePath, "utf-8");
+      let questions = JSON.parse(data);
+      questions = questions.map((q) =>
+        q.id === updatedQuestion.id ? updatedQuestion : q
+      );
+      await fs.writeFile(filePath, JSON.stringify(questions, null, 2));
+      res.status(200).json(updatedQuestion);
+    } catch (err) {
+      res.status(500).json({ error: "更新エラー" });
+    }
+  }
+
+  if (req.method === "DELETE") {
+    try {
+      const id = req.query.id;
+      const data = await fs.readFile(filePath, "utf-8");
+      const questions = JSON.parse(data);
+      const filtered = questions.filter((q) => q.id !== id);
+      await fs.writeFile(filePath, JSON.stringify(filtered, null, 2));
+      res.status(200).json({ message: "削除完了" });
+    } catch (err) {
+      res.status(500).json({ error: "削除エラー" });
+    }
+  }
+}
