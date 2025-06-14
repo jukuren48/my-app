@@ -7,7 +7,7 @@ export default function EnglishTrapQuestions() {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    fetch("/api/questions")
+    fetch(`${window.location.origin}/api/questions`)
       .then((res) => res.json())
       .then((data) => setQuestions(data));
   }, []);
