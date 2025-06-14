@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import EnglishTrapQuestions from "./EnglishTrapQuestions";
-import AdminPage from "./AdminPage";
+import EnglishTrapQuestions from, "./components/EnglishTrapQuestions";
+import AdminPage from "./components/AdminPage";
 
 function App() {
   return (
