@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 export default function AdminPage() {
   const [questions, setQuestions] = useState([]);
-  const [editingQuestion, setEditingQuestion] = useState(null);
   const [form, setForm] = useState({
     unit: "",
     question: "",
@@ -12,151 +11,93 @@ export default function AdminPage() {
     incorrectExplanations: { "": "" },
   });
 
-  useEffect(() => {
-    fetchQuestions();
-  }, []);
-
-  const fetchQuestions = async () => {
-    const res = await fetch("/api/questions");
-    const data = await res.json();
-    setQuestions(data);
+  const loadQuestions = () => {
+    fetch("/api/questions")
+      .then((res) => res.json())
+      .then((data) => setQuestions(data));
   };
 
-  const handleInputChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  useEffect(() => {
+    loadQuestions();
+  }, []);
+
+  const handleChange = (field, value) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleChoiceChange = (index, value) => {
-    const updatedChoices = [...form.choices];
-    updatedChoices[index] = value;
-    setForm({ ...form, choices: updatedChoices });
+    const newChoices = [...form.choices];
+    newChoices[index] = value;
+    setForm((prev) => ({ ...prev, choices: newChoices }));
   };
 
-  const handleIncorrectExplanationChange = (choice, value) => {
-    setForm({
-      ...form,
-      incorrectExplanations: { ...form.incorrectExplanations, [choice]: value },
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!editingQuestion) {
-      await fetch("/api/questions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+  const handleSubmit = () => {
+    fetch("/api/questions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    }).then(() => {
+      loadQuestions();
+      setForm({
+        unit: "",
+        question: "",
+        choices: ["", "", "", ""],
+        correct: "",
+        explanation: "",
+        incorrectExplanations: { "": "" },
       });
-    } else {
-      await fetch("/api/questions", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, id: editingQuestion.id }),
-      });
-    }
-    setForm({
-      unit: "",
-      question: "",
-      choices: ["", "", "", ""],
-      correct: "",
-      explanation: "",
-      incorrectExplanations: { "": "" },
     });
-    setEditingQuestion(null);
-    fetchQuestions();
-  };
-
-  const handleEdit = (q) => {
-    setEditingQuestion(q);
-    setForm(q);
-  };
-
-  const handleDelete = async (id) => {
-    await fetch(`/api/questions?id=${id}`, { method: "DELETE" });
-    fetchQuestions();
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">問題登録・編集画面</h1>
+    <div className="space-y-4">
+      <h2 className="text-xl font-bold">問題追加</h2>
+      <input
+        className="border p-2 w-full"
+        placeholder="Unit"
+        value={form.unit}
+        onChange={(e) => handleChange("unit", e.target.value)}
+      />
+      <input
+        className="border p-2 w-full"
+        placeholder="Question"
+        value={form.question}
+        onChange={(e) => handleChange("question", e.target.value)}
+      />
+      {form.choices.map((choice, i) => (
+        <input
+          key={i}
+          className="border p-2 w-full"
+          placeholder={`Choice ${i + 1}`}
+          value={choice}
+          onChange={(e) => handleChoiceChange(i, e.target.value)}
+        />
+      ))}
+      <input
+        className="border p-2 w-full"
+        placeholder="Correct Answer"
+        value={form.correct}
+        onChange={(e) => handleChange("correct", e.target.value)}
+      />
+      <input
+        className="border p-2 w-full"
+        placeholder="Explanation"
+        value={form.explanation}
+        onChange={(e) => handleChange("explanation", e.target.value)}
+      />
+      <button
+        className="px-4 py-2 bg-green-500 text-white rounded"
+        onClick={handleSubmit}
+      >
+        追加
+      </button>
 
-      <form className="mb-8 space-y-4" onSubmit={handleSubmit}>
-        <input
-          name="unit"
-          value={form.unit}
-          onChange={handleInputChange}
-          placeholder="単元"
-          className="border p-2 w-full"
-        />
-        <input
-          name="question"
-          value={form.question}
-          onChange={handleInputChange}
-          placeholder="問題文"
-          className="border p-2 w-full"
-        />
-        {form.choices.map((choice, idx) => (
-          <div key={idx} className="flex items-center space-x-2">
-            <input
-              value={choice}
-              onChange={(e) => handleChoiceChange(idx, e.target.value)}
-              placeholder={`選択肢 ${idx + 1}`}
-              className="border p-2 w-full"
-            />
-            <input
-              value={form.incorrectExplanations[choice] || ""}
-              onChange={(e) =>
-                handleIncorrectExplanationChange(choice, e.target.value)
-              }
-              placeholder="誤答の解説"
-              className="border p-2 w-full"
-            />
-          </div>
+      <h3 className="text-lg font-semibold mt-6">登録済みの問題一覧</h3>
+      <ul className="list-disc pl-5">
+        {questions.map((q, i) => (
+          <li key={i}>{q.question}</li>
         ))}
-        <input
-          name="correct"
-          value={form.correct}
-          onChange={handleInputChange}
-          placeholder="正解"
-          className="border p-2 w-full"
-        />
-        <input
-          name="explanation"
-          value={form.explanation}
-          onChange={handleInputChange}
-          placeholder="正解の解説"
-          className="border p-2 w-full"
-        />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          {editingQuestion ? "更新" : "新規登録"}
-        </button>
-      </form>
-
-      <h2 className="text-xl font-bold mb-2">登録済みの問題</h2>
-      <div className="space-y-2">
-        {questions.map((q) => (
-          <div key={q.id} className="border p-4 rounded">
-            <p>
-              <strong>{q.unit}</strong> : {q.question}
-            </p>
-            <button
-              onClick={() => handleEdit(q)}
-              className="bg-yellow-400 text-white px-2 py-1 mr-2"
-            >
-              編集
-            </button>
-            <button
-              onClick={() => handleDelete(q.id)}
-              className="bg-red-500 text-white px-2 py-1"
-            >
-              削除
-            </button>
-          </div>
-        ))}
-      </div>
+      </ul>
     </div>
   );
 }
