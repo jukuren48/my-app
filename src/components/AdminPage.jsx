@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import api from "../api/api";
+import * as api from "../api/api";
 
 export default function AdminPage() {
   const emptyQuestion = {
