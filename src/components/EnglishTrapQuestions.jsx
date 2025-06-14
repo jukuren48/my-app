@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import api from "../api/api";
+import * as api from "../api/api";
 
 export default function EnglishTrapQuestions() {
   const [questions, setQuestions] = useState([]);
