@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { nanoid } from "nanoid";
 
-const filePath = path.join(process.cwd(), "api", "questions.json");
+const filePath = path.join(process.cwd(), "questions.json");
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
